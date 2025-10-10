@@ -6,9 +6,97 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr1: purple;
+  --clr2: rgb(128, 0, 128, 0.4); 
+  --clr3: hotpink;
+}
+
 body {
   height: 100vh;
   display: grid;
   place-content: center;
   background: radial-gradient(circle at 50% 0%, rgb(88, 54, 109) 16.4%, rgb(45, 46, 72) 68.2%, rgb(41, 32, 65) 99.1%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main-container {
+  background-color: aliceblue;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.poster-container {
+  max-width: 450px;
+  height: auto;
+  position: relative;
+}
+.poster-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.poster-text {
+  color: whitesmoke;
+  position: absolute;
+  bottom: 1rem;
+  left: 1.2rem;
+}
+.poster-text h3 {
+  font-weight: 500;
+  line-height: 1.5;
+}
+.poster-text h4 {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.poster-text i {
+  margin-right: 6px;
+}
+.seats-container {
+  padding: 1rem;
+}
+.seat-colors {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.seat-colors li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.seat-colors svg{
+  height: 20px;
+  margin-right: 6px;
+}
+.seat-colors span {
+  font-size: 0.85rem;
+}
+.available {
+  fill: var(--clr1);
+}
+.booked {
+  fill: var(--clr2);
+}
+.selected {
+  fill: var(--clr3);
+}
+
+.seats {
+  margin-top: 1.2rem;
+}
+.seats svg {
+  height: 30px;
+  margin-inline: 2px;
+}
+
+.seats div {
+  display: flex;
+  justify-content: center;
+}
+.row-g {
+  display: flex;
+  gap: 1.5rem;
 }

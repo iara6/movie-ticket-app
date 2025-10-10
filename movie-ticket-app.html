@@ -4,34 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="movie-ticket-app.css">
+  <!-- FONT -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <!-- FAVICON -->
   <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQARABEAAAABEAEQARAAAAAAAAAAAAAAABAAAAAAAAAAEBAAAAAAAAAAEBAAAAAAAAAAEBAAAAAAAAAAEAAAAAAAAAAAAAD//wAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACP/wAAg/8AAOD/AAD4PwAA/g8AAP+HAAD/5wAA" rel="icon" type="image/x-icon">
   <title>Movie Tickets</title>
 </head>
 <body>
   <main class="main-container">
-    <div class="poster">
-      <img src="" alt="">
-      <h3>Movie Title</h3>
-      <h4>Movie Theater</h4>
+    <div class="poster-container">
+      <img src="https://m.media-amazon.com/images/M/MV5BNTU4NWQ5ZTQtYzUyMS00ZWY1LTgyMDItNDcyN2UyMzgzYjM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="">
+      <!-- https://m.media-amazon.com/images/M/MV5BOWU2ZGEyNzUtMjRlZS00YTlkLTk1MDEtYzk3N2UwYjE3ZmM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg -->
+      <div class="poster-text">
+        <h3>The Nightmare Before Christmas</h3>
+        <h4><i class="fa-solid fa-location-dot"></i>Cineplex Entertainment, Toronto ON</h4>
+      </div>
     </div>
-    <div class="seats">
-      <div>
+    <div class="seats-container">
+      <div class="seat-colors">
         <li>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+          <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
           <span>Available</span>
         </li>
         <li>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+          <svg class="booked" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
           <span>Booked</span>
         </li>
         <li>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path>
+          <svg class="selected" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path>
           </svg>
           <span>Selected</span>
         </li>
+      </div>
 
-
+      <div class="seats">
+        <div class="row-g">
+          <div>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+          </div>
+          <div>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+            <svg class="available" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><path d="M30,42.5L30,55L70,55L70,42.5C70,38.423,71.971,34.807,75,32.524L75,20C75,14.477,70.523,10,65,10L35,10C29.477,10,25,14.477,25,20L25,32.524C28.029,34.807,30,38.423,30,42.5Z" stroke="none"></path><path d="M90,42.5C90,38.358,86.642,35,82.5,35S75,38.358,75,42.5L75,60L25,60L25,42.5C25,38.358,21.642,35,17.5,35S10,38.358,10,42.5C10,45.764,12.089,48.534,15,49.564L15,90L25,90L25,85L75,85L75,90L85,90L85,49.564C87.911,48.534,90,45.764,90,42.5Z" stroke="none"></path></svg>
+          </div>
+        </div>
       </div>
 
     </div>
