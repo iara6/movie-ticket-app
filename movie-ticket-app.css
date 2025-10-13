@@ -7,9 +7,10 @@
 }
 
 :root {
-  --clr1: purple;
+  --clr1: rgb(120, 29, 176);
   --clr2: rgb(128, 0, 128, 0.4); 
   --clr3: hotpink;
+  --clr4: violet;
 }
 
 body {
@@ -24,10 +25,11 @@ body {
   background-color: aliceblue;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 12px 2px var(--clr4);
 }
 
 .poster-container {
-  max-width: 450px;
+  max-width: 460px;
   height: auto;
   position: relative;
 }
@@ -54,7 +56,7 @@ body {
   margin-right: 6px;
 }
 .seats-container {
-  padding: 1.1rem 1.3rem;
+  padding: 1.2rem 1.4rem;
 }
 .seat-colors {
   display: flex;
@@ -75,16 +77,23 @@ body {
 }
 .available {
   fill: var(--clr1);
+  transition: all 150ms ease-out;
+  cursor: pointer;
+}
+.available:hover {
+  fill: var(--clr3);
 }
 .booked {
   fill: var(--clr2);
+  cursor: not-allowed;
 }
 .selected {
   fill: var(--clr3);
+  cursor: pointer;
 }
 
 .seats {
-  margin-top: 1.2rem;
+  margin-top: 1.3rem;
   position: relative;
 }
 .seats svg {
@@ -113,11 +122,7 @@ body {
 .rows span {
   padding: 0.25rem 0;
 }
-/* .rows span {
-  display: block;
-  display: flex;
-  justify-content: space-between;
-} */
+
 .row-g,
 .row-f,
 .row-e,
@@ -129,13 +134,40 @@ body {
   gap: 1.5rem;
   margin: 0.5rem 0;
 }
-
+.screen-container {
+  position: relative;
+  margin-top: 1rem;
+}
+.screen-text {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--clr2);
+  font-size: 0.85rem;
+}
 .screen {
   display: block; 
   border-bottom: 3px solid var(--clr1);
-  border-bottom-left-radius: 70%;
-  border-bottom-right-radius: 70%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
   height: 2.5rem;
   width: 90%;
-  margin: 20px 0;
+  margin-inline: auto;
+  /* filter: blur(2px); */
+}
+.screen-blur {
+  display: block; 
+  border-bottom: 5px solid var(--clr3);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 2.5rem;
+  width: 89%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  position: absolute;
+  bottom: 0.2rem;
+  z-index: 10;
+  filter: blur(3.5px);
 }
