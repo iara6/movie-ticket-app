@@ -84,19 +84,21 @@ body {
 .seat-colors li {
   list-style-type: none;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .seat-colors svg{
   height: 20px;
   margin-right: 6px;
+  cursor: default; 
 }
 
 .seat-colors span {
   font-size: 0.9rem;
 }
 
-.available {
+.available,
+.available-color {
   fill: var(--clr1);
   transition: all 150ms ease-out;
   cursor: pointer;
