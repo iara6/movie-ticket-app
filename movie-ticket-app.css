@@ -23,7 +23,8 @@ body {
 
 .main-container {
   background-color: aliceblue;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 12px 2px var(--clr4);
 }
@@ -33,60 +34,83 @@ body {
   height: auto;
   position: relative;
 }
+
+.poster-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(105, 17, 102, 0.6) 0%, rgba(158, 48, 164, 0.2) 40%, transparent 100%);
+}
+
 .poster-container img {
   height: 100%;
   width: 100%;
+  display: block;
   object-fit: cover;
 }
+
 .poster-text {
   color: whitesmoke;
   position: absolute;
   bottom: 1rem;
   left: 1.2rem;
+  z-index: 10;
 }
+
 .poster-text h3 {
   font-weight: 500;
   line-height: 1.5;
 }
+
 .poster-text h4 {
   font-weight: 300;
   font-size: 0.9rem;
 }
+
 .poster-text i {
   margin-right: 6px;
 }
+
 .seats-container {
   padding: 1.2rem 1.4rem;
 }
+
 .seat-colors {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+
 .seat-colors li {
   list-style-type: none;
   display: flex;
   align-items: center;
 }
+
 .seat-colors svg{
   height: 20px;
   margin-right: 6px;
 }
+
 .seat-colors span {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
+
 .available {
   fill: var(--clr1);
   transition: all 150ms ease-out;
   cursor: pointer;
 }
+
 .available:hover {
   fill: var(--clr3);
 }
+
 .booked {
   fill: var(--clr2);
   cursor: not-allowed;
 }
+
 .selected {
   fill: var(--clr3);
   cursor: pointer;
@@ -96,6 +120,7 @@ body {
   margin-top: 1.3rem;
   position: relative;
 }
+
 .seats svg {
   height: 2rem;
   width: 2rem;
@@ -106,6 +131,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .rows {
   display: flex;
   flex-direction: column-reverse;
@@ -134,10 +160,12 @@ body {
   gap: 1.5rem;
   margin: 0.5rem 0;
 }
+
 .screen-container {
   position: relative;
-  margin-top: 1rem;
+  margin: 1rem 0 0.5rem;
 }
+
 .screen-text {
   position: absolute;
   bottom: 1.2rem;
@@ -146,6 +174,7 @@ body {
   color: var(--clr2);
   font-size: 0.85rem;
 }
+
 .screen {
   display: block; 
   border-bottom: 3px solid var(--clr1);
@@ -154,8 +183,8 @@ body {
   height: 2.5rem;
   width: 90%;
   margin-inline: auto;
-  /* filter: blur(2px); */
 }
+
 .screen-blur {
   display: block; 
   border-bottom: 5px solid var(--clr3);
@@ -170,4 +199,63 @@ body {
   bottom: 0.2rem;
   z-index: 10;
   filter: blur(3.5px);
+}
+
+.purchase-data,
+.purchase-data__right-section {
+  display: flex;
+}
+
+.purchase-data {
+  background-color: var(--clr3);
+  color: aliceblue;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transform: scale(1, 1.05) ;  
+}
+
+.purchase-data li {
+  list-style: none;
+}
+
+.purchase-data__left-section {
+  padding: 0.7rem 1.1rem;
+  background-color: var(--clr2);
+}
+
+.purchase-data__left-section li:last-child,
+.total {
+  font-weight: 500;
+}
+
+.purchase-data__right-section {
+  padding: 0.7rem 1.1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.purchase-data__right-section div:first-child li {
+  text-shadow: 0 0 1px var(--clr1);
+}
+
+.next-button {
+  background-color: aliceblue;
+  color: var(--clr1);
+  text-shadow: 0 0 1px var(--clr2);
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 0 6px 1px var(--clr2);
+  transition: all 150ms ease-out;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  box-shadow: 0 0 8px 5px var(--clr2);
+}
+
+.next-button i {
+  margin-left: 6px;
 }
