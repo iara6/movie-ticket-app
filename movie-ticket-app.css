@@ -249,13 +249,16 @@ body {
   text-shadow: 0 0 1px var(--clr2);
   padding: 1rem 1.5rem;
   border-radius: 14px;
-  box-shadow: 0 0 6px 1px var(--clr2);
+  /* box-shadow: 0 0 6px 1px var(--clr2); */
+  box-shadow: 0 7px 0 0 var(--clr2);
+  position: relative;
   transition: all 150ms ease-out;
   cursor: pointer;
 }
 
-.next-button:hover {
-  box-shadow: 0 0 8px 5px var(--clr2);
+.next-button:active {
+  top: 4px;
+  box-shadow: 0 1px 0 0 var(--clr2);
 }
 
 .next-button i {
