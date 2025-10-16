@@ -22,7 +22,7 @@ tickets.textContent = ticketsNumber;
 
 availableSeats.forEach((seat) => {
   seat.addEventListener('click', () => {
-    console.log();
+    console.log(seat.parentNode.parentNode.className.slice(-1).toUpperCase());
 
     seat.classList.toggle('selected');
 
@@ -47,10 +47,17 @@ const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal-content');
 const closeBtn = document.querySelector('.close-button');
 
+const movieTitle = document.querySelector('.poster-movie-title').textContent;
+const bookedMovieTitle = document.querySelector('.movie-title');
+const bookedShowDate = document.querySelector('.show-date');
+const bookedTicketsNumber = document.querySelector('.booked-tickets');
 
 nextBtn.addEventListener('click', () => {
-  modal.classList.add('open');
-  requestAnimationFrame(() => modalContent.classList.add('modal-open'));
+  if (tickets.textContent > 0) {
+    modal.classList.add('open');
+    requestAnimationFrame(() => modalContent.classList.add('modal-open'));   
+  }
+  renderBookingDetails();
 });
 
 function closeModal() {
@@ -66,7 +73,7 @@ closeBtn.addEventListener('click', closeModal);
 
 /* BOOKING DETAILS */
 
-const movieTitle = document.querySelector('.poster-movie-title').textContent;
+/* const movieTitle = document.querySelector('.poster-movie-title').textContent;
 const bookedMovieTitle = document.querySelector('.movie-title');
 
 bookedMovieTitle.textContent = movieTitle;
@@ -74,3 +81,15 @@ bookedMovieTitle.textContent = movieTitle;
 const bookedShowDate = document.querySelector('.show-date');
 bookedShowDate.innerHTML = tomorrow.format('dddd, MMM D') + ' - 7:30PM';
 
+const bookedTicketsNumber = document.querySelector('.booked-tickets');
+
+bookedTicketsNumber.innerHTML = `${tickets.textContent} tickets`; */
+
+
+
+function renderBookingDetails() {
+  bookedMovieTitle.textContent = movieTitle;
+  bookedShowDate.innerHTML = tomorrow.format('dddd, MMM D') + ' - 7:30PM';
+  bookedTicketsNumber.innerHTML = Number(tickets.textContent) === 1 ? `${tickets.textContent} ticket` : `${tickets.textContent} tickets`;
+
+};
