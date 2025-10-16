@@ -20,10 +20,10 @@ total.innerHTML = `$${totalPrice}`;
 let ticketsNumber = 0;
 tickets.textContent = ticketsNumber;
 
-console.log(availableSeats);
-
 availableSeats.forEach((seat) => {
   seat.addEventListener('click', () => {
+    console.log();
+
     seat.classList.toggle('selected');
 
     if (seat.classList.contains('selected')) {
@@ -38,6 +38,39 @@ availableSeats.forEach((seat) => {
     total.innerHTML = `$${totalPrice.toFixed(2)}`;
   });
 });
+;
+
+/* SHOW/CLOSE MODAL */
+
+const nextBtn = document.querySelector('.next-button');
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content');
+const closeBtn = document.querySelector('.close-button');
 
 
-console.log(Number((Math.round(950) / 100).toFixed(2)));
+nextBtn.addEventListener('click', () => {
+  modal.classList.add('open');
+  requestAnimationFrame(() => modalContent.classList.add('modal-open'));
+});
+
+function closeModal() {
+  modal.classList.remove('open');
+  modalContent.classList.remove('modal-open');
+};
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
+
+closeBtn.addEventListener('click', closeModal);
+
+/* BOOKING DETAILS */
+
+const movieTitle = document.querySelector('.poster-movie-title').textContent;
+const bookedMovieTitle = document.querySelector('.movie-title');
+
+bookedMovieTitle.textContent = movieTitle;
+
+const bookedShowDate = document.querySelector('.show-date');
+bookedShowDate.innerHTML = tomorrow.format('dddd, MMM D') + ' - 7:30PM';
+

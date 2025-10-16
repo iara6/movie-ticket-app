@@ -267,7 +267,7 @@ body {
 }
 
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   z-index: 100;
   left: 0;
@@ -282,31 +282,47 @@ body {
   display: block;
 }
 
-body.modal-open {
+/* body.modal-open {
   overflow: hidden;
-}
+} */
 
 .modal-content {
+  opacity: 0;
   background-color: aliceblue;
   height: fit-content;
-  /* width: auto; */
   max-width: 460px;
   width: 100%;
-  padding: 1.2rem;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 12px 2px var(--clr4);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: opacity 400ms linear;
 }
-
+.modal-content.modal-open {
+  opacity: 1;
+}
+.close-button {
+  cursor: pointer;
+  padding: 1px 4px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transition: all 150ms linear;
+}
+.close-button:hover {
+  color: var(--clr1);
+}
 .modal-content h3,
 .modal-content h2 {
   text-align: center;
 }
 .modal-content h3 {
+  font-size: 1.1rem;
   margin-bottom: 1.2rem;
+  font-weight: 500;
 }
 .emoticon {
   padding-inline: 0.7rem;
@@ -330,6 +346,9 @@ body.modal-open {
   text-align: center;
   margin-inline: auto;
   /* padding-inline: 2rem; */
+}
+.booking-details h4 {
+  line-height: 1.8;
 }
 
 /* add confetti */
